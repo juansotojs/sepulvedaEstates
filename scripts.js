@@ -2,6 +2,47 @@
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".contact-form");
+  
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+  
+      const formData = new FormData(form);
+  
+      // Submit the form data using Fetch
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          // Optionally, clear the form fields
+          form.reset();
+  
+          // Display your custom success message
+          // You can replace the alert() with any custom modal or inline message.
+          alert("Thank you for your inquiry. We will be in touch soon.");
+        } else {
+          response.json().then(data => {
+            if (data.hasOwnProperty("errors")) {
+              alert(data["errors"].map(error => error["message"]).join(", "));
+            } else {
+              alert("Oops! There was a problem submitting your form.");
+            }
+          });
+        }
+      })
+      .catch(error => {
+        console.error("Error submitting the form:", error);
+        alert("Oops! There was a problem submitting your form.");
+      });
+    });
+  });
+
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
@@ -13,6 +54,18 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
     });
+});
+
+document.querySelector('.contact-button').addEventListener('click', function(e) {
+    e.preventDefault();
+    const formSection = document.querySelector('#contact');
+    
+    if(formSection) {
+        formSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
 });
 
 // Close menu on window resize

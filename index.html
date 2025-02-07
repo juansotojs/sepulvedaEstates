@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sepulveda Estates</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -23,34 +27,45 @@
                     <li><a href="#areas">Areas We Cover</a></li>
                     
                     <li><a href="#contact">Contact</a></li>
+                    
                 </ul>
             </div>
         </nav>
     </header>
 
     <div class="hero" id="home">
-        <div class="herotwo">
-            <img src="assets/IMG_1820.PNG" alt="Luxury Estates Logo" class="main-logo">
-        </div>
-    </div>
+        <div class="slideshow">
+            <img src="assets/photo-1560448204-e02f11c3d0e2.jpeg" alt="Slide 1">
+
+            <img src="assets/houze.jpg" alt="Slide 2">
+            <img src="assets/Quiet-luxury-interior-design-style.jpg" alt="Slide 3">
+          </div>
+          <div class="hero-content">
+            <img src="assets/IMG_1820.PNG" alt="Logo" class="main-logo">
+          </div>
+    </div> 
 
     <section class="agent-profile">
         <div class="statement-section">
             <div class="container">
                 <p class="service-statement">Specializing in premium properties across the Bay Area.</p>
-                <button class="contact-button" id="about">Contact Us</button>
+                <button type="submit" id="about" href="#contact" class="contact-button">CONTACT US</button>
             </div>
         </div>
 
         <div class="bio-section">
-            <div class="gold-separator"></div>
+            <div class="gold-separator" ></div>
 
             <div class="container">
 
                 <div class="portrait-container">
-                    <img class="migz" src="assets/20240329-DSC07028.JPEG" alt="Miguel Sepulveda">
-                    <div class="portrait-placeholder"></div>
-                </div>
+                    <picture>
+                      <!-- Mobile image: will be used when the viewport is 768px or less -->
+                      <source media="(max-width: 768px)" srcset="assets/mobile.jpg">
+                      <!-- Fallback image for larger viewports -->
+                      <img class="migz" src="assets/20240329-DSC07028.JPEG" alt="Miguel Sepulveda">
+                    </picture>
+                  </div>
 
                 <div class="bio-content">
                     <h2 class="name">Miguel Sepulveda</h2>
@@ -59,13 +74,17 @@
                         <p>As a dedicated real estate professional, I bring a unique combination of confidence, passion, and an unwavering commitment to every aspect of your home buying or selling journey. I understand that real estate transactions are not just financial decisions—they are deeply personal milestones in people's lives. That's why I approach every client with care, listening closely to your needs and working relentlessly to ensure your goals are not just met, but exceeded.
                             My work ethic is unmatched, and I’m driven by a genuine desire to see my clients succeed. Whether you're buying your first home, selling an investment property, or navigating a complex market, I’m here to offer guidance, insight, and support every step of the way. I take great pride in the trust my clients place in me, and I make it my mission to make your experience as seamless and stress-free as possible.
                             In this ever-changing real estate landscape, I stay informed and proactive, leveraging the latest market knowledge and technology to ensure you have the best possible outcomes. I’m not just here to close deals—I’m here to build lasting relationships and to be a trusted resource for you, now and in the future.
-                            Let me put my expertise, determination, and passion to work for you. Whether you're buying or selling, I’m committed to achieving the results you want and deserve !</p>
+                            Let me put my expertise, determination, and passion to work for you. Whether you're buying or selling, I’m committed to achieving the results you want and deserve!</p>
                     </div>
+                    <div id="areas"></div>
                 </div>
+          
             </div>
         </div>
+      
+
     </section>
-    <section class="listings-section" id="areas">
+    <section class="listings-section" >
         <div class="listings-container">
             <div class="gold-separator"></div>
 
@@ -113,14 +132,18 @@
         <div class="form-container">
             <div class="gold-separator"></div>
             <h2 class="form-header">Fill in the form below and I will contact you soon</h2>
-            <form class="contact-form">
+            <div id="form-response" style="display: none;"></div>
+
+            <form class="contact-form"
+            action="https://formspree.io/f/xldgljqv"
+            method="POST">
                 <!-- Form structure remains unchanged -->
                 <div class="form-grid">
                     <!-- Left Column -->
                     <div class="form-column">
                         <div class="form-group">
                             <label>Interested In</label>
-                            <select class="form-input">
+                            <select class="form-input" name="Interested In">
                                 <option value=""></option>
                                 <option>Buying</option>
                                 <option>Selling</option>
@@ -130,7 +153,7 @@
                         
                         <div class="form-group">
                             <label>Property Type</label>
-                            <select class="form-input">
+                            <select class="form-input" name="Property Type">
                                 <option value=""></option>
                                 <option>Apartment</option>
                                 <option>House</option>
@@ -142,7 +165,7 @@
                         
                         <div class="form-group">
                             <label>Location</label>
-                            <input type="text" class="form-input" placeholder="">
+                            <input type="text" name="Location" class="form-input" placeholder="">
                         </div>
                     </div>
     
@@ -150,22 +173,22 @@
                     <div class="form-column">
                         <div class="form-group">
                             <label>Price Range</label>
-                            <input type="text" class="form-input" placeholder="">
+                            <input type="text" name="Price Range" class="form-input" placeholder="">
                         </div>
                         
                         <div class="form-group">
                             <label>Full Name</label>
-                            <input type="text" class="form-input" placeholder="">
+                            <input type="text" name="Full Name" class="form-input" placeholder="">
                         </div>
                         
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" class="form-input" placeholder="">
+                            <input type="email" name="Email" class="form-input" placeholder="">
                         </div>
                         
                         <div class="form-group">
                             <label>Phone</label>
-                            <input type="tel" class="form-input" placeholder="">
+                            <input type="tel" name="Phone" class="form-input" placeholder="">
                         </div>
                     </div>
                 </div>
