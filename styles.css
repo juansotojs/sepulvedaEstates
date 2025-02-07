@@ -8,6 +8,7 @@
 body {
     font-family: 'Playfair Display', serif;
     min-height: 100vh;
+    background-color: #102635;
     position: relative;
 }
 
@@ -235,6 +236,7 @@ font-family: Arial, Helvetica, sans-serif;    text-align: center;
 }
 
 .service-statement {
+    
     font-family: 'Cormorant Garamond', serif;
     font-size: 2rem;
     color: #333;
@@ -300,7 +302,7 @@ font-family: Arial, Helvetica, sans-serif;    text-align: center;
 }
 .bio-content p{
     font-family: "Libre Franklin", serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .name {
@@ -327,6 +329,7 @@ section {
 /* Media Queries */
 @media (max-width: 768px) {
     nav ul {
+        
         gap: 1.5rem;
     }
 
@@ -340,7 +343,7 @@ section {
     }
 
     .listings-container {
-        padding: 0rem 1.5rem;
+        padding: 0rem 0rem;
         margin: 0 1.5rem;
     }
 
@@ -354,6 +357,9 @@ section {
 
     .form-grid {
         grid-template-columns: 1fr;
+    }
+    .done{
+        background-color: white;
     }
 
     .form-container {
@@ -387,6 +393,7 @@ section {
 
     header {
         background-color: #102635;
+        padding: .1rem;
         padding-top: env(safe-area-inset-top);
     }
 
@@ -417,12 +424,10 @@ section {
 
     .service-statement {
         font-size: 2rem;
+        font-family: 'Cormorant Garamond', serif;
     }
 
-    .contact-button {
-        padding: 1rem 2rem;
-        font-size: 1.1rem;
-    }
+   
 
     .bio-section .container {
         padding: 0 1rem;
@@ -434,7 +439,7 @@ section {
     }
 
     .bio-content h2 {
-        font-size: 1.8rem;
+        font-size: 3rem;
         
     }
 
@@ -442,8 +447,8 @@ section {
         font-size: 1rem;
     }
 
-    .bio-text {
-        font-size: 1rem;
+    .bio-text p{
+        font-size: 1.1rem;
     }
 
     .form-container {
@@ -480,10 +485,7 @@ section {
         font-size: 1.1rem;
     }
 
-    .contact-button {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-    }
+  
 }
 
 <style>
@@ -740,8 +742,14 @@ section {
 
 @media (max-width: 768px) {
     #areas {
-      scroll-margin-top: 50px; /* Change this value to suit your mobile header */
+      scroll-margin-top: 25px; /* Change this value to suit your mobile header */
     }
+    #about {
+        scroll-margin-top: 25px; /* Change this value to suit your mobile header */
+      }
+      #contact {
+        scroll-margin-top: 25px; /* Change this value to suit your mobile header */
+      }
   }
 
   /* Hero Section Setup */
@@ -814,13 +822,18 @@ section {
       
     }
     .hero{
-        height: 58vh;
+        height: 45vh;
+        padding-bottom: 0px;
     }
     .main-logo{
         padding-top: 140px;
     }
+    .statement-section {
+        padding: 0rem 3rem;
+    }
+    
   }
 
-  .contact-info{
+  .contact-info p{
     text-decoration: none;
   }
