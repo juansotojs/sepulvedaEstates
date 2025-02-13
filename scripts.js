@@ -99,3 +99,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+const reelCards = document.querySelectorAll('.reel-card');
+
+reelCards.forEach(card => {
+    const reelUrl = card.getAttribute('data-reel');
+    const videoId = reelUrl.split('/reel/')[1].replace('/', '');
+    
+    fetch(`https://www.instagram.com/p/${videoId}/?__a=1&__d=dis`)
+        .then(response => response.json())
+        .then(data => {
+            const videoUrl = data.graphql.shortcode_media.video_url;
+            card.innerHTML = `
+                <video controls playsinline>
+                    <source src="${videoUrl}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+        })
+        .catch(error => {
+            console.error('Error loading Instagram reel:', error);
+            card.innerHTML = '<p>Unable to load reel</p>';
+        });
+});

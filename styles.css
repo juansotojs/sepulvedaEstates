@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: white;
+    background-color: #F0F0F0;
     padding: 1.5rem 5%;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -38,12 +38,12 @@ nav a {
 }
 
 nav a:hover {
-    color: #efc489;
+    color: #afafaf;
 }
 
 
 .listings-section {
-    background: white;
+    background: #F0F0F0;
     padding: 1rem 0;
 }
 
@@ -74,8 +74,8 @@ nav a:hover {
 }
 
 .site-footer {
-    background: #efc489;
-    color: #FFFFFF;
+    background: #afafaf;
+    color: #F0F0F0;
     padding: 3rem 1rem;
 font-family: Arial, Helvetica, sans-serif;    text-align: center;
 }
@@ -115,12 +115,12 @@ font-family: Arial, Helvetica, sans-serif;    text-align: center;
 }
 
 .social-link:hover {
-    background-color: white;
-    border-color: white;
+    background-color: #F0F0F0;
+    border-color: #F0F0F0;
 }
 
 .social-link i {
-    color: white;
+    color: #F0F0F0;
     font-size: 1.2rem;
 }
 
@@ -130,7 +130,7 @@ font-family: Arial, Helvetica, sans-serif;    text-align: center;
 
 .inquiry-form {
     padding: 1rem 1rem 3.2rem;
-    background: white;
+    background: #F0F0F0;
 }
 
 .form-container {
@@ -141,7 +141,7 @@ font-family: Arial, Helvetica, sans-serif;    text-align: center;
 .gold-separator {
     width: 60px;
     height: 2px;
-    background: #efc489;
+    background: #afafaf;
     margin: 1.5rem auto;
 }
 
@@ -183,15 +183,15 @@ font-family: Arial, Helvetica, sans-serif;    text-align: center;
     padding: 12px 16px;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
-    background: white;
+    background: #F0F0F0;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
 
 .form-input:focus {
     outline: none;
-    border-color: #efc489;
-    background: white;
+    border-color: #afafaf;
+    background: #F0F0F0;
     box-shadow: 0 2px 8px rgba(212, 175, 55, 0.1);
 }
 
@@ -200,8 +200,8 @@ font-family: Arial, Helvetica, sans-serif;    text-align: center;
     width: 200px;
     margin: 2rem auto 0;
     padding: 14px;
-    background: #efc489;
-    color: white;
+    background: #afafaf;
+    color: #F0F0F0;
     border: none;
     border-radius: 30px;
     text-transform: uppercase;
@@ -212,13 +212,13 @@ font-family: Arial, Helvetica, sans-serif;    text-align: center;
 }
 
 .submit-btn:hover {
-    background: #ffdaa5;
+    background: #d1d1d1;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 
 .agent-profile {
-    background: white;
+    background: #F0F0F0;
     padding: 4rem 0 2rem;
 }
 
@@ -235,7 +235,7 @@ font-family: Arial, Helvetica, sans-serif;    text-align: center;
     display: none;
     width: 20px;
     height: 2px;
-    background-color: #efc489;
+    background-color: #afafaf;
     margin: 1.5rem auto 0;
 }
 
@@ -256,8 +256,8 @@ font-family: Arial, Helvetica, sans-serif;    text-align: center;
         width: 200px;
         margin: 2rem auto 0;
         padding: 14px;
-        background: #efc489;
-        color: white;
+        background: #afafaf;
+        color: #F0F0F0;
         border: none;
         border-radius: 30px;
         text-transform: uppercase;
@@ -268,7 +268,7 @@ font-family: Arial, Helvetica, sans-serif;    text-align: center;
 }
 
 .contact-button:hover {
-    background: #ffdaa5;
+    background: #d1d1d1;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
@@ -363,7 +363,7 @@ section {
         grid-template-columns: 1fr;
     }
     .done{
-        background-color: white;
+        background-color: #F0F0F0;
     }
 
     .form-container {
@@ -396,13 +396,13 @@ section {
     }
 
     header {
-        background-color: #102635;
+        background-color: #0A0A0A;
         padding: .1rem;
         padding-top: env(safe-area-inset-top);
     }
 
     nav a {
-        color: #efc489 !important;
+        color: #afafaf !important;
     }
 }
 
@@ -513,7 +513,7 @@ section {
     display: block;
     width: 25px;
     height: 2px;
-    background:#B6982F;
+    background:#afafaf;
     
     margin: 5px 0;
     transition: all 0.3s ease;
@@ -536,7 +536,7 @@ section {
         left: -100%;
         right: auto;
         flex-direction: column;
-        background: #102635;
+        background: #0A0A0A;
         width: 100%;
         text-align: center;
         padding: 2rem 0;
@@ -669,13 +669,13 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #102635;
+    background: #0A0A0A;
     padding: .5rem;
     text-align: center;
 }
 
 .card-title {
-    color: #B6982F;
+    color: #afafaf;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.4rem;
     margin: 0 0 0.5rem 0;
@@ -844,7 +844,7 @@ section {
 
   .instagram-section {
     padding: .1rem 1rem;
-    background-color: white;
+    background-color: #F0F0F0;
 }
 
 .instagram-metrics {
@@ -874,19 +874,30 @@ section {
     padding: 0 2rem;
 }
 
+/* Update reel card styling */
+.reel-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reel-card {
+    background: #000;
+}
+
+/* Add loading state */
 .reel-card {
     position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    aspect-ratio: 9/16;
+    min-height: 500px;
 }
+
+
+
 
 .reel-placeholder {
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: #F0F0F0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -894,7 +905,7 @@ section {
 }
 
 .instagram-logo {
-    color: #fff;
+    color: #F0F0F0;
     font-size: 3rem;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     border-radius: 15px;
