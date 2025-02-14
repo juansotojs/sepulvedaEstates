@@ -881,9 +881,6 @@ section {
     object-fit: cover;
 }
 
-.reel-card {
-    background: #000;
-}
 
 /* Add loading state */
 .reel-card {
