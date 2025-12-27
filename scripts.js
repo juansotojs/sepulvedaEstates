@@ -56,17 +56,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-document.querySelector('.contact-button').addEventListener('click', function(e) {
-    e.preventDefault();
-    const formSection = document.querySelector('#contact');
-    
-    if(formSection) {
-        formSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }
-});
 
 // Close menu on window resize
 window.addEventListener('resize', () => {
