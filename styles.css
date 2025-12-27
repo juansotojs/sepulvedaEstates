@@ -772,6 +772,19 @@ section {
     bottom: 0;
   }
   
+  /* Dark overlay to make logo more visible */
+  .slideshow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
   /* Slideshow Images */
   .slideshow img {
     position: absolute;
@@ -805,7 +818,7 @@ section {
   /* Hero Content (Logo) */
   .hero-content {
     position: relative;
-    z-index: 1; /* Bring content above the slideshow */
+    z-index: 2; /* Bring content above the slideshow and overlay */
     display: flex;
     justify-content: center;
     align-items: center;
