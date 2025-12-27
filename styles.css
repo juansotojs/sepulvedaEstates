@@ -720,12 +720,20 @@ section {
       overflow: hidden !important;
     }
     
+    .portrait-container {
+        width: 100%;
+        max-width: 600px;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
     /* Ensure the image fills the container and is cropped */
     .migz {
         height: 100%;
         width: 100%;
       object-fit: cover !important;
-      object-position: 40% 47% !important;
+      object-position: center top !important;
     }
     .hamburger{
         padding-top: 32px;
@@ -780,7 +788,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
     pointer-events: none;
   }
