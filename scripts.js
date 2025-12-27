@@ -122,3 +122,20 @@ reelCards.forEach(card => {
             card.innerHTML = '<p>Unable to load reel</p>';
         });
 });
+
+// Force metadata loading for testimonial videos on mobile
+document.addEventListener('DOMContentLoaded', () => {
+    const testimonialVideos = document.querySelectorAll('.testimonial-video-card video');
+    
+    testimonialVideos.forEach(video => {
+        // Force load metadata to show thumbnail
+        video.load();
+        
+        // On mobile, ensure metadata loads by setting currentTime to 0
+        if (window.innerWidth <= 768) {
+            video.addEventListener('loadedmetadata', () => {
+                video.currentTime = 0.1;
+            });
+        }
+    });
+});

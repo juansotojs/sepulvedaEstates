@@ -1000,5 +1000,13 @@ section {
     .testimonial-video-card {
         aspect-ratio: 9/16;
         min-height: auto;
+        background: #000;
+    }
+    
+    .testimonial-video-card video {
+        object-fit: contain;
+        background: #000;
+        min-height: 100%;
+        width: 100%;
     }
 }
