@@ -330,6 +330,10 @@ section {
     scroll-margin-top: 100px;
 }
 
+#about {
+    scroll-margin-top: 80px;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     nav ul {
@@ -757,7 +761,7 @@ section {
       scroll-margin-top: 25px; /* Change this value to suit your mobile header */
     }
     #about {
-        scroll-margin-top: 25px; /* Change this value to suit your mobile header */
+        scroll-margin-top: 80px; /* Change this value to suit your mobile header */
       }
       #contact {
         scroll-margin-top: 25px; /* Change this value to suit your mobile header */
@@ -896,6 +900,12 @@ section {
 }
 
 .plan-button-container {
+    text-align: center;
+    margin: 3rem auto 2rem;
+    padding: 0 2rem;
+}
+
+.home-buyer-button-container {
     text-align: center;
     margin: 3rem auto 2rem;
     padding: 0 2rem;
