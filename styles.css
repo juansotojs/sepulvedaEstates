@@ -128,6 +128,8 @@ nav a:hover {
 .listings-section {
     background: #F0F0F0;
     padding: 1rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .listings-container {
@@ -136,6 +138,7 @@ nav a:hover {
     padding: 2.5rem 2rem;
     border-radius: 8px;
     text-align: center;
+    position: relative;
 }
 
 .areas-title {
@@ -807,7 +810,7 @@ section {
     }
     
 }
-.image-cardsf {
+.image-cardsanfran {
     position: relative;
     width: 100%;
     max-width: 950px;
@@ -815,7 +818,7 @@ section {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
-    background-image: url('assets/Golden Gate Bridge - 22.jpg.webp');
+    background-image: url('assets/shutterstock_2220817823-1000x640.jpg');
     background-size: cover;
     background-position: center;
     margin: 20px auto;
@@ -913,6 +916,16 @@ section {
     background: #0A0A0A;
     padding: .5rem;
     text-align: center;
+    z-index: 1;
+}
+
+.image-cardccc,
+.image-carda,
+.image-cardsf,
+.image-cards,
+.image-cardsj,
+.image-cardst {
+    isolation: isolate;
 }
 
 .card-title {
