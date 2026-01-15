@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Language Selection Modal -->
+    <div id="language-modal" class="language-modal">
+        <div class="language-modal-content">
+            <h2>Select Your Language / Seleccione Su Idioma</h2>
+            <div class="language-buttons">
+                <button class="language-btn" data-lang="en">English</button>
+                <button class="language-btn" data-lang="es">Español</button>
+            </div>
+        </div>
+    </div>
     
     <header>
         <nav>
@@ -23,13 +33,25 @@
                     <span class="hamburger-line"></span>
                 </button>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#areas">Areas We Cover</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    
+                    <li class="language-toggle-mobile">
+                        <div class="language-toggle">
+                            <span class="lang-option" data-lang="en">EN</span>
+                            <span class="lang-separator">|</span>
+                            <span class="lang-option" data-lang="es">ES</span>
+                        </div>
+                        <div class="language-divider"></div>
+                    </li>
+                    <li><a href="#home" data-translate="nav.home">Home</a></li>
+                    <li><a href="#about" data-translate="nav.about">About Me</a></li>
+                    <li><a href="#testimonials" data-translate="nav.testimonials">Testimonials</a></li>
+                    <li><a href="#areas" data-translate="nav.areas">Areas We Cover</a></li>
+                    <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
                 </ul>
+                <div class="language-toggle-desktop">
+                    <span class="lang-option" data-lang="en">EN</span>
+                    <span class="lang-separator">|</span>
+                    <span class="lang-option" data-lang="es">ES</span>
+                </div>
             </div>
         </nav>
     </header>
@@ -49,9 +71,9 @@
     <section class="agent-profile">
         <div class="statement-section">
             <div class="container">
-                <p class="service-statement">Specializing in premium properties across the Bay Area.</p>
+                <p class="service-statement" data-translate="service.statement">Specializing in premium properties across the Bay Area.</p>
                 <a href="#contact" class="plan-action-button">
-                    <i class="fas fa-envelope"></i> CONTACT US
+                    <i class="fas fa-envelope"></i> <span data-translate="button.contact">CONTACT US</span>
                 </a>
             </div>
         </div>
@@ -74,10 +96,10 @@
                     <h2 class="name">Miguel Sepulveda</h2>
                     <br/>
                     <div class="bio-text">
-                        <p>As a dedicated real estate professional, I bring a unique combination of confidence, passion, and an unwavering commitment to every aspect of your home buying or selling journey. I understand that real estate transactions are not just financial decisions—they are deeply personal milestones in people's lives. That's why I approach every client with care, listening closely to your needs and working relentlessly to ensure your goals are not just met, but exceeded.
-                            My work ethic is unmatched, and I’m driven by a genuine desire to see my clients succeed. Whether you're buying your first home, selling an investment property, or navigating a complex market, I’m here to offer guidance, insight, and support every step of the way. I take great pride in the trust my clients place in me, and I make it my mission to make your experience as seamless and stress-free as possible.
-                            In this ever-changing real estate landscape, I stay informed and proactive, leveraging the latest market knowledge and technology to ensure you have the best possible outcomes. I’m not just here to close deals—I’m here to build lasting relationships and to be a trusted resource for you, now and in the future.
-                            Let me put my expertise, determination, and passion to work for you. Whether you're buying or selling, I’m committed to achieving the results you want and deserve!</p>
+                        <p data-translate="bio.text">As a dedicated real estate professional, I bring a unique combination of confidence, passion, and an unwavering commitment to every aspect of your home buying or selling journey. I understand that real estate transactions are not just financial decisions—they are deeply personal milestones in people's lives. That's why I approach every client with care, listening closely to your needs and working relentlessly to ensure your goals are not just met, but exceeded.
+                            My work ethic is unmatched, and I'm driven by a genuine desire to see my clients succeed. Whether you're buying your first home, selling an investment property, or navigating a complex market, I'm here to offer guidance, insight, and support every step of the way. I take great pride in the trust my clients place in me, and I make it my mission to make your experience as seamless and stress-free as possible.
+                            In this ever-changing real estate landscape, I stay informed and proactive, leveraging the latest market knowledge and technology to ensure you have the best possible outcomes. I'm not just here to close deals—I'm here to build lasting relationships and to be a trusted resource for you, now and in the future.
+                            Let me put my expertise, determination, and passion to work for you. Whether you're buying or selling, I'm committed to achieving the results you want and deserve!</p>
                     </div>
                    
                 </div>
@@ -91,7 +113,7 @@
     <section class="testimonials-section" id="testimonials">
         <div class="testimonials-container">
             <div class="gold-separator"></div>
-            <h2 class="areas-title">What Our Clients Have to Say</h2>
+            <h2 class="areas-title" data-translate="testimonials.title">What Our Clients Have to Say</h2>
             <div class="testimonials-videos">
                 <div class="testimonial-video-card">
                     <video controls playsinline preload="metadata" poster="assets/IMG_6307.jpg">
@@ -114,7 +136,7 @@
             </div>
             <div class="home-buyer-button-container">
                 <a href="assets/First time home buyer guide.pdf" target="_blank" rel="noopener noreferrer" class="plan-action-button">
-                    <i class="fas fa-download"></i> HOME BUYER GUIDE
+                    <i class="fas fa-download"></i> <span data-translate="button.homeBuyer">HOME BUYER GUIDE</span>
                 </a>
             </div>
         </div>
@@ -124,7 +146,7 @@
         <div class="instagram-metrics">
             <div class="gold-separator" ></div>
     
-            <h2 class="areas-title2">1M+ Views Across All Social Platforms</h2>
+            <h2 class="areas-title2" data-translate="social.views">1M+ Views Across All Social Platforms</h2>
         </div>
         <div class="reels-container">
             <!-- Add your Instagram reel URLs here -->
@@ -150,7 +172,7 @@
         </div>
         <div class="home-buyer-button-container">
             <a href="assets/Miguel Sepulveda.pdf" target="_blank" rel="noopener noreferrer" class="plan-action-button">
-                <i class="fas fa-download"></i> PLAN OF ACTION
+                <i class="fas fa-download"></i> <span data-translate="button.planAction">PLAN OF ACTION</span>
             </a>
         </div>
         <div id="areas"></div>
@@ -163,7 +185,7 @@
     <section class="listings-section" >
         <div class="listings-container">
             <div class="gold-separator"></div>
-            <h2 class="areas-title">Areas We Cover</h2>
+            <h2 class="areas-title" data-translate="areas.title">Areas We Cover</h2>
             <div class="image-cardccc">
                 <div class="card-overlay">
                     <h3 class="card-title">Contra Costa County</h3>
@@ -206,7 +228,7 @@
     <section class="inquiry-form" id="contact">
         <div class="form-container">
             <div class="gold-separator"></div>
-            <h2 class="form-header">Fill in the form below and I will contact you soon</h2>
+            <h2 class="form-header" data-translate="form.header">Fill in the form below and I will contact you soon</h2>
             <div id="form-response" style="display: none;"></div>
 
             <form class="contact-form"
@@ -217,28 +239,28 @@
                     <!-- Left Column -->
                     <div class="form-column">
                         <div class="form-group">
-                            <label>Interested In</label>
+                            <label data-translate="form.interestedIn">Interested In</label>
                             <select class="form-input" name="Interested In">
                                 <option value=""></option>
-                                <option>Buying</option>
-                                <option>Selling</option>
+                                <option data-translate="form.buying">Buying</option>
+                                <option data-translate="form.selling">Selling</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label>Property Type</label>
+                            <label data-translate="form.propertyType">Property Type</label>
                             <select class="form-input" name="Property Type">
                                 <option value=""></option>
-                                <option>Apartment</option>
-                                <option>House</option>
-                                <option>House with Pool</option>
-                                <option>Commercial Property</option>
-                                <option>Other</option>
+                                <option data-translate="form.apartment">Apartment</option>
+                                <option data-translate="form.house">House</option>
+                                <option data-translate="form.housePool">House with Pool</option>
+                                <option data-translate="form.commercial">Commercial Property</option>
+                                <option data-translate="form.other">Other</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label>Location</label>
+                            <label data-translate="form.location">Location</label>
                             <input type="text" name="Location" class="form-input" placeholder="">
                         </div>
                     </div>
@@ -246,28 +268,28 @@
                     <!-- Right Column -->
                     <div class="form-column">
                         <div class="form-group">
-                            <label>Price Range</label>
+                            <label data-translate="form.priceRange">Price Range</label>
                             <input type="text" name="Price Range" class="form-input" placeholder="">
                         </div>
                         
                         <div class="form-group">
-                            <label>Full Name</label>
+                            <label data-translate="form.fullName">Full Name</label>
                             <input type="text" name="Full Name" class="form-input" placeholder="">
                         </div>
                         
                         <div class="form-group">
-                            <label>Email</label>
+                            <label data-translate="form.email">Email</label>
                             <input type="email" name="Email" class="form-input" placeholder="">
                         </div>
                         
                         <div class="form-group">
-                            <label>Phone</label>
+                            <label data-translate="form.phone">Phone</label>
                             <input type="tel" name="Phone" class="form-input" placeholder="">
                         </div>
                     </div>
                 </div>
                 
-                <button type="submit" class="submit-btn">SUBMIT</button>
+                <button type="submit" class="submit-btn" data-translate="form.submit">SUBMIT</button>
             
             </form>
         </div>
