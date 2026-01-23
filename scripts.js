@@ -286,6 +286,16 @@ function translatePage(lang) {
   // Update HTML lang attribute
   document.documentElement.lang = lang;
   
+  // Update Home Buyer Guide PDF link based on language
+  const homeBuyerGuideLink = document.getElementById('home-buyer-guide-link');
+  if (homeBuyerGuideLink) {
+    if (lang === 'es') {
+      homeBuyerGuideLink.href = 'assets/FTHB Guide - Spanish.pdf';
+    } else {
+      homeBuyerGuideLink.href = 'assets/First time home buyer guide.pdf';
+    }
+  }
+  
   // Update language toggle active state
   updateLanguageToggle(lang);
 }
