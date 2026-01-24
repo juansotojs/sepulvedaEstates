@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Display your custom success message
           const lang = getStoredLanguage() || 'en';
-          const successMsg = lang === 'es' 
-            ? "Gracias por su consulta. Nos pondremos en contacto pronto." 
+          const successMsg = lang === 'es'
+            ? "Gracias por su consulta. Nos pondremos en contacto pronto."
             : "Thank you for your inquiry. We will be in touch soon.";
           alert(successMsg);
         } else {
@@ -257,7 +257,7 @@ function translatePage(lang) {
     if (key) {
       const keys = key.split('.');
       let translation = translations[lang];
-      
+
       if (translation) {
         for (let k of keys) {
           if (translation && translation[k]) {
@@ -268,7 +268,7 @@ function translatePage(lang) {
           }
         }
       }
-      
+
       if (translation) {
         if (element.tagName === 'INPUT' && element.type === 'submit') {
           element.value = translation;
@@ -282,10 +282,10 @@ function translatePage(lang) {
       }
     }
   });
-  
+
   // Update HTML lang attribute
   document.documentElement.lang = lang;
-  
+
   // Update Home Buyer Guide PDF link based on language
   const homeBuyerGuideLink = document.getElementById('home-buyer-guide-link');
   if (homeBuyerGuideLink) {
@@ -295,7 +295,7 @@ function translatePage(lang) {
       homeBuyerGuideLink.href = 'assets/First time home buyer guide.pdf';
     }
   }
-  
+
   // Update language toggle active state
   updateLanguageToggle(lang);
 }
@@ -327,7 +327,7 @@ function hideLanguageModal() {
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
   const storedLang = getStoredLanguage();
-  
+
   if (!storedLang) {
     // First visit - show language modal
     showLanguageModal();
@@ -335,7 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Not first visit - apply stored language
     translatePage(storedLang);
   }
-  
+
   // Handle language button clicks in modal
   const languageButtons = document.querySelectorAll('.language-btn');
   languageButtons.forEach(button => {
@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hideLanguageModal();
     });
   });
-  
+
   // Handle language toggle clicks in header (both desktop and mobile)
   const langOptions = document.querySelectorAll('.lang-option');
   if (langOptions.length > 0) {
@@ -369,7 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-  
+
   // Set initial active state
   const currentLang = storedLang || 'en';
   updateLanguageToggle(currentLang);
